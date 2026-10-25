@@ -11,13 +11,12 @@ public class StudiKasus216 {
         namaMahasiswa = scanner.nextLine();
         System.out.println("Masukkan jenis kegiatan (BELMAWA/BAKORMA/Mandiri/PKM/Lainnya): ");
         jenisKegiatan = scanner.nextLine();
-       
+        System.out.println("Masukkan jumlah dokumen yang diupload (0-4): ");
+        jumlahDokumen = scanner.nextInt();
 
         if (jenisKegiatan.equalsIgnoreCase("BELMAWA")||
             jenisKegiatan.equalsIgnoreCase("BAKORMA")||
             jenisKegiatan.equalsIgnoreCase("Mandiri")) {
-        System.out.println("Masukkan jumlah dokumen yang diupload (0-4): ");
-        jumlahDokumen = scanner.nextInt();
         System.out.println("Masukkan peringkat juara (1/2/3/0 jika tidak juara): ");
         peringkatJuara = scanner.nextInt();
             if (jumlahDokumen >= 4) {
@@ -33,8 +32,6 @@ public class StudiKasus216 {
         } else if (jenisKegiatan.equalsIgnoreCase("PKM")) {
             System.out.println("Masukkan status pendanaan PKM (1=lolos, 0=tidak lolos): ");
             int statusPendanaan = scanner.nextInt();
-            System.out.println("Masukkan jumlah dokumen yang diupload (0-4): ");
-            jumlahDokumen = scanner.nextInt();
             if (statusPendanaan == 1) {
                 if (jumlahDokumen >= 4) {
                 status = "lengkap, dana penghargaan diberikan";
